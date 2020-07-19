@@ -123,7 +123,7 @@ pipeline {
                 echo '### Creating a new app in Staging ###'
                 sh '''
                         oc project ${STAGE_PROJECT}
-                        oc new-app --name books -i book:stage
+                        oc new-app --name books -i books:stage
                         oc expose svc/${APP_NAME}
                    '''
             }
